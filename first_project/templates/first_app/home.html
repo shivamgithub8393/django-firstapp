@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'first_app/base.html' %}
+
+{% block home %}
+<div class="jumbotron">
+  <a href="{% url 'first_app:index' %}">Index</a>
+  <h1>Welcome to Home Page</h1>
+  <h2>Go /formpage to fill out the form</h2>
+	<br><hr>
+	<h3>{{data|cut:"this"}}</h3>   
+	<h3>{{number|add:"34"}}</h3>
+	<h3>{{date|date:"Y-m-d"}}</h3>
+</div>
+{% endblock home %}

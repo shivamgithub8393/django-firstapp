@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'first_app/base.html' %}
+{% load static %}
+
+{% block index %}
+    <h1>This is index.html</h1>
+    <h3>{{access_records}}</h3>
+    {% if access_records %}
+    <table>
+      <thead>
+        <th>Site Name</th>
+        <th>Date</th>
+      </thead>
+      {% for acc_rec in access_records %}
+      <tr>
+        <th>{{acc_rec.name}}</th>
+        <th>{{acc_rec}}</th>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+
+{% endblock index %}
